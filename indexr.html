@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionizing Soil Testing</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background: #4CAF50;
+            padding: 10px 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+            border: 1px solid #fff;
+            background-color: #4CAF50;
+            font-size: 0.8em; /* Reduced font size for smaller text */
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a span {
+            font-size: 0.7em; /* Further reduced font size for text under icons */
+        }
+
+        nav ul li a:hover {
+            background: #45a049;
+            border-color: #45a049;
+            color: #f8f9fa;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle hover shadow */
+        }
+
+        header {
+            background: url('https://media.istockphoto.com/id/1345836683/photo/farmer-hand-and-soil-with-compost-and-organic-manure.jpg?s=612x612&w=0&k=20&c=wpyzA3kIBlL6eI-UQMaqqbebDedryk02rCL-mWdD8kE=') no-repeat center center;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0 0 20px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        section {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, select, button, textarea {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #results, #explanations {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home"><span>🏠</span> Home</a></li>
+            <li><a href="#farmer-details"><span>👨‍🌾</span> Farmer Details</a></li>
+            <li><a href="#analyzer"><span>🧪</span> Soil Test Analyzer</a></li>
+            <li><a href="#contact"><span>📞</span> Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <h1>Revolutionizing Soil Testing</h1>
+        <p>A Low-Cost, Portable Solution for Smallholder Farmers</p>
+    </header>
+
+    <!-- Farmer Details Section -->
+    <section id="farmer-details">
+        <h2 class="section-title">Farmer Details</h2>
+        <form id="farmer-details-form">
+            <label for="farmer-name">Name:</label>
+            <input type="text" id="farmer-name" name="farmer-name" required>
+
+            <label for="farmer-location">Location:</label>
+            <input type="text" id="farmer-location" name="farmer-location" required>
+
+            <label for="farmer-crop">Primary Crop:</label>
+            <input type="text" id="farmer-crop" name="farmer-crop" required>
+
+            <label for="farm-size">Farm Size (in acres):</label>
+            <input type="number" id="farm-size" name="farm-size" required>
+
+            <button type="submit">Submit Details</button>
+        </form>
+    </section>
+
+    <!-- Soil Test Analyzer Section -->
+    <section id="analyzer">
+        <h2 class="section-title">Soil Test Analyzer</h2>
+        <form id="soil-test-form">
+            <label for="ph">Soil pH:</label>
+            <input type="number" id="ph" name="ph" step="0.1" required>
+
+            <label for="nitrogen">Nitrogen (N):</label>
+            <input type="number" id="nitrogen" name="nitrogen" required>
+
+            <label for="phosphorus">Phosphorus (P):</label>
+            <input type="number" id="phosphorus" name="phosphorus" required>
+
+            <label for="potassium">Potassium (K):</label>
+            <input type="number" id="potassium" name="potassium" required>
+
+            <label for="texture">Soil Texture:</label>
+            <select id="texture" name="texture">
+                <option value="sandy">Sandy</option>
+                <option value="loamy">Loamy</option>
+                <option value="clay">Clay</option>
+            </select>
+
+            <label for="moisture">Moisture Content (%):</label>
+            <input type="number" id="moisture" name="moisture" required>
+
+            <label for="calcium">Calcium (Ca):</label>
+            <input type="number" id="calcium" name="calcium" required>
+
+            <label for="magnesium">Magnesium (Mg):</label>
+            <input type="number" id="magnesium" name="magnesium" required>
+
+            <button type="submit">Analyze</button>
+        </form>
+
+        <div id="results">
+            <h2>Recommendations</h2>
+            <ul id="recommendation-list"></ul>
+        </div>
+
+        <div id="explanations">
+            <h2>Soil Parameter Explanations</h2>
+            <p><strong>Soil pH:</strong> Indicates the acidity or alkalinity of the soil. Ideal pH for most crops is 6.0-7.5.</p>
+            <p><strong>Nitrogen (N):</strong> Essential for plant growth and leafy development.</p>
+            <p><strong>Phosphorus (P):</strong> Important for root development and flowering.</p>
+            <p><strong>Potassium (K):</strong> Enhances disease resistance and improves fruit quality.</p>
+            <p><strong>Soil Texture:</strong> Refers to the proportion of sand, silt, and clay in the soil.</p>
+            <p><strong>Moisture Content:</strong> Measures the water content in the soil, critical for proper irrigation.</p>
+            <p><strong>Calcium (Ca):</strong> Strengthens plant cell walls and promotes root development.</p>
+            <p><strong>Magnesium (Mg):</strong> Essential for photosynthesis and enzyme activity.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>
